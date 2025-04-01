@@ -1,8 +1,12 @@
 const express = require("express");
 const path = require("path");
+const compression = require("compression"); // Import compression middleware
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// Enable Gzip compression
+app.use(compression());
 
 // Serve static files from the "public" directory
 app.use(express.static(path.join(__dirname, "public")));
@@ -58,6 +62,12 @@ app.get("/", (req, res) => {
 app.get("/sitemap.xml", (req, res) => {
   const sitemapPath = path.join(__dirname, "public", "sitemap.xml");
   res.sendFile(sitemapPath);
+});
+
+// Route to serve robots.txt
+app.get("/robots.txt", (req, res) => {
+  const robotsPath = path.join(__dirname, "public", "robots.txt");
+  res.sendFile(robotsPath);
 });
 
 // Start the server
