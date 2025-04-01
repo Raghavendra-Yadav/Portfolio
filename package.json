@@ -1,16 +1,26 @@
 {
-  "name": "myportfolio",
+  "name": "portfolio",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "vercel-build": "echo 'No build step required' && exit 0"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "dependencies": {
     "express": "^5.1.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Raghavendra-Yadav/Portfolio.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Raghavendra-Yadav/Portfolio/issues"
+  },
+  "homepage": "https://github.com/Raghavendra-Yadav/Portfolio#readme",
+  "description": ""
 }

@@ -39,3 +39,4 @@ coverage/
 
 # Favicon and images cache
 images/favicon/
+.vercel
