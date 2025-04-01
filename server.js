@@ -8,8 +8,13 @@ const PORT = process.env.PORT || 3000;
 // Enable Gzip compression
 app.use(compression());
 
-// Serve static files from the "public" directory
-app.use(express.static(path.join(__dirname, "public")));
+// Serve static files from the "public" directory with caching
+app.use(
+  express.static(path.join(__dirname, "public"), {
+    maxAge: "1d", // Cache static assets for 1 year
+    etag: false, // Disable ETag headers for simplicity
+  })
+);
 
 // Middleware to dynamically set meta tags
 app.use((req, res, next) => {
