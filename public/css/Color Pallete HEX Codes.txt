@@ -1,0 +1,7 @@
+--electric-indigo: #7311f6ff;
+--cornflower-blue: #548cffff;
+--middle-blue: #92dce5ff;
+--aquamarine: #93ffd8ff;
+--aero-blue: #cfffdcff;
+--body:#cef0f3
+#548cff63
